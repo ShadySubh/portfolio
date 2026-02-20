@@ -35,7 +35,7 @@ export function ContactForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full mt-8 p-6 sm:p-8 bg-[#0a0a0a] border border-neutral-800 rounded-none relative overflow-hidden group/form shadow-2xl">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full mt-8 p-4 sm:p-8 bg-[#0a0a0a] border border-neutral-800 rounded-none relative overflow-hidden group/form shadow-2xl">
             {/* Minimal Terminal Header */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-sky-500 to-purple-500 opacity-50" />
             <div className="absolute right-4 top-4 flex gap-1.5 opacity-40">

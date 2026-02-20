@@ -1,6 +1,7 @@
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { ContactForm } from "@/components/contact-form";
 import { SpotifyPlayer } from "@/components/spotify-player";
+import { Github } from "lucide-react";
 
 const people = [
   {
@@ -37,18 +38,18 @@ const people = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-8 sm:p-20 font-mono flex flex-col items-center relative overflow-hidden bg-[#0a0a0a]">
+    <main className="min-h-screen p-5 sm:p-20 font-mono flex flex-col items-center relative overflow-hidden bg-[#0a0a0a]">
 
       {/* Brutalist Terminal Grid Background */}
       <div className="absolute inset-0 w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] z-0 pointer-events-none" />
 
-      <div className="max-w-2xl w-full flex flex-col gap-16 sm:gap-20 pb-24 relative z-10">
+      <div className="max-w-2xl w-full flex flex-col gap-12 sm:gap-20 pb-16 sm:pb-24 relative z-10">
 
         {/* Hero Section */}
-        <section className="flex flex-col items-start gap-6 mt-12 sm:mt-24">
-          <div className="space-y-6">
-            {/* Top Row: Profile Image & Spotify Player */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-end gap-8 mb-8">
+        <section className="flex flex-col items-start gap-4 mt-8 sm:mt-16 w-full">
+          <div className="space-y-4 w-full">
+            {/* Top Row: Profile Image & Title */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 mb-8 sm:mb-10">
               {/* Terminal Profile Image */}
               <div className="relative isolate w-fit group">
                 {/* Corner brackets */}
@@ -75,8 +76,8 @@ export default function Home() {
                 </div>
 
                 {/* Active dev badge */}
-                <div className="absolute -right-[110px] bottom-1 font-mono text-[10px] text-neutral-500 flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="flex items-center gap-1.5">
+                <div className="absolute -bottom-6 left-0 font-mono text-[9px] sm:text-[10px] text-neutral-500 flex flex-row items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                  <div className="flex items-center gap-1">
                     <span className="w-1.5 h-1.5 bg-emerald-500 animate-pulse" />
                     <span className="text-emerald-500 tracking-widest">SYS.ONLINE</span>
                   </div>
@@ -84,31 +85,27 @@ export default function Home() {
                 </div>
               </div>
 
-              <SpotifyPlayer className="mt-0 w-full sm:w-auto" />
-
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white flex items-center gap-3">
-                <span className="text-emerald-500 opacity-80">{">"}</span>
-                Shibu
-                <span className="w-3 sm:w-4 h-8 sm:h-10 bg-white/80 animate-pulse"></span>
-              </h1>
-              <div className="flex items-center gap-3 ml-[34px] sm:ml-[42px] font-mono">
-                <span className="text-[10px] text-neutral-400 uppercase tracking-widest bg-[#111] border border-neutral-800 px-2.5 py-1.5 flex items-center gap-2 shadow-inner">
-                  <span className="text-emerald-500 opacity-70">usr_id:</span> SUBHASISH_DAS
-                </span>
-                <span className="text-[10px] text-neutral-600 bg-[#0a0a0a] border border-neutral-800 px-2 py-1.5 uppercase tracking-widest">
-                  Auth: Ok
-                </span>
+              <div className="flex flex-col gap-2 z-10">
+                <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white flex items-center gap-3">
+                  Hi, I'm Shibu
+                  <span className="w-3 sm:w-4 h-8 sm:h-10 bg-white/80 animate-pulse"></span>
+                </h1>
+                <div className="flex flex-wrap items-center gap-3 font-mono mt-1">
+                  <span className="text-[10px] text-neutral-400 uppercase tracking-widest bg-[#111] border border-neutral-800 px-2.5 py-1.5 flex items-center gap-2 shadow-inner">
+                    <span className="text-emerald-500 opacity-70">usr_id:</span> SUBHASISH_DAS
+                  </span>
+                  <span className="text-[10px] text-neutral-600 bg-[#0a0a0a] border border-neutral-800 px-2 py-1.5 uppercase tracking-widest">
+                    Auth: Ok
+                  </span>
+                </div>
               </div>
             </div>
-            <p className="text-lg sm:text-xl text-neutral-400 leading-relaxed font-mono w-full">
+            <p className="text-base sm:text-xl text-neutral-400 leading-relaxed font-mono w-full mt-4 sm:mt-6">
               <span className="text-neutral-500 mr-2">root@developer:~#</span>
               <span className="text-sky-400 bg-sky-500/10 border border-sky-500/20 px-1.5 py-0.5 rounded-none">Web Developer</span> crafting minimal, intentional digital experiences.
             </p>
 
-            <div className="flex flex-col gap-3 pt-4">
+            <div className="flex flex-col gap-2 pt-2">
               <span className="text-xs font-mono text-neutral-500 uppercase tracking-wider">Trusted by Founders and Entrepreneurs from all over the world</span>
               <div className="flex flex-row items-center justify-start w-full pl-2">
                 <AnimatedTooltip items={people} />
@@ -116,7 +113,7 @@ export default function Home() {
             </div>
 
             {/* Action Buttons */}
-            <div className="pt-6 sm:pt-8 flex flex-wrap items-center gap-4 w-full">
+            <div className="pt-4 sm:pt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
               <a
                 href="#contact"
                 className="group relative inline-flex items-center justify-center font-mono font-medium text-sm tracking-wide overflow-hidden rounded-none h-14 px-8 bg-[#111] border border-neutral-800 hover:border-emerald-500/30 transition-all duration-500 shadow-xl hover:shadow-emerald-500/10 w-full sm:w-auto cursor-pointer"
@@ -134,8 +131,6 @@ export default function Home() {
               </a>
 
               <div className="flex gap-4 w-full sm:w-auto flex-1 sm:flex-none">
-
-
                 <a
                   href="#web-dev"
                   className="group relative inline-flex items-center justify-center font-mono text-sm tracking-wide overflow-hidden rounded-none h-14 px-6 bg-[#111]/50 border border-neutral-800 hover:border-sky-500/30 hover:bg-[#111] transition-all duration-300 flex-1 sm:flex-none cursor-pointer"
@@ -144,15 +139,27 @@ export default function Home() {
                     <span className="opacity-40 group-hover:opacity-100">{">"}</span> web_dev
                   </span>
                 </a>
+
+                <a
+                  href="https://github.com/ShadySubh"
+                  target="_blank"
+                  className="group relative inline-flex items-center justify-center font-mono text-sm tracking-wide overflow-hidden rounded-none h-14 px-6 bg-[#111]/50 border border-neutral-800 hover:border-white/30 hover:bg-[#111] transition-all duration-300 flex-1 sm:flex-none cursor-pointer"
+                >
+                  <span className="text-neutral-500 group-hover:text-white transition-colors flex items-center gap-2">
+                    <Github className="w-4 h-4 opacity-40 group-hover:opacity-100" /> github
+                  </span>
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="flex gap-4 text-sm text-neutral-500 mt-2 border-t border-neutral-900 pt-4 w-full">
+          <div className="flex gap-4 text-sm text-neutral-500 border-t border-neutral-900 pt-3 w-full mt-2">
             <span>Available for freelance</span>
             <span className="text-neutral-800">/</span>
             <span>Based in India</span>
           </div>
+
+          <SpotifyPlayer className="w-full sm:w-auto mt-2" />
         </section>
 
         {/* Skills */}
@@ -186,7 +193,7 @@ export default function Home() {
                 <span className="w-1.5 h-4 bg-neutral-400/80"></span>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-12 gap-x-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-10 sm:gap-y-12 gap-x-4">
                 <div>
                   <h3 className="text-white mb-5 font-bold opacity-80 pl-3 border-l border-emerald-500 text-[11px] uppercase tracking-widest leading-none">Design/</h3>
                   <ul className="text-neutral-500 text-sm flex flex-col gap-3">
@@ -205,7 +212,7 @@ export default function Home() {
                     <li className="hover:text-sky-400 transition-colors cursor-crosshair">./Framer_Motion</li>
                   </ul>
                 </div>
-                <div className="col-span-2 sm:col-span-1">
+                <div className="col-span-1">
                   <h3 className="text-white mb-5 font-bold opacity-80 pl-3 border-l border-purple-500 text-[11px] uppercase tracking-widest leading-none">Workflow/</h3>
                   <ul className="text-neutral-500 text-sm flex flex-col gap-3">
                     <li className="hover:text-purple-400 transition-colors cursor-crosshair">./AI_Agents</li>
@@ -235,10 +242,10 @@ export default function Home() {
 
           <div className="flex flex-col gap-4">
             {[
-              { id: 1, title: "Collab Heaven", url: "https://shadysubh-ch.netlify.app/", desc: "Modern agency website with interactive UI, smooth animations, and a premium dark design system.", year: "2025" },
-              { id: 2, title: "Know Your Cooking Oil", url: "https://knowyourcookingoil.netlify.app/", desc: "High-performance Next.js application structured with scalable React architecture.", year: "2024" }
+              { id: 1, title: "Collab Heaven", url: "https://shadysubh-ch.netlify.app/", github: "https://github.com/ShadySubh", desc: "Modern agency website with interactive UI, smooth animations, and a premium dark design system.", year: "2025" },
+              { id: 2, title: "Know Your Cooking Oil", url: "https://knowyourcookingoil.netlify.app/", github: "https://github.com/ShadySubh", desc: "High-performance Next.js application structured with scalable React architecture.", year: "2024" }
             ].map((project) => (
-              <div key={project.id} className="group relative w-full flex flex-col sm:flex-row gap-6 p-6 bg-[#0a0a0a] border border-neutral-800 border-l-2 border-l-neutral-800 hover:border-l-sky-500 hover:bg-[#111] transition-all duration-300 rounded-none">
+              <div key={project.id} className="group relative w-full flex flex-col sm:flex-row gap-4 sm:gap-6 p-4 sm:p-6 bg-[#0a0a0a] border border-neutral-800 border-l-2 border-l-neutral-800 hover:border-l-sky-500 hover:bg-[#111] transition-all duration-300 rounded-none">
                 <div className="w-full sm:w-1/3 aspect-[16/9] sm:aspect-[4/3] bg-neutral-900 border border-neutral-800 rounded-none overflow-hidden relative flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity duration-300">
                   <img
                     src={`/images/web_dev_projects/${project.id}.jpg`}
@@ -258,14 +265,19 @@ export default function Home() {
                       {project.desc}
                     </p>
                   </div>
-                  <div className="mt-8 flex justify-between items-center">
+                  <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0">
                     <div className="flex gap-2">
                       <span className="text-[10px] font-mono text-sky-400 bg-sky-500/10 px-1.5 py-0.5 rounded-none border border-sky-500/20">Next.js</span>
                       <span className="text-[10px] font-mono text-neutral-400 bg-neutral-800 px-1.5 py-0.5 rounded-none border border-neutral-700">Tailwind</span>
                     </div>
-                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-neutral-400 hover:text-sky-400 transition-colors flex items-center gap-1.5 cursor-pointer">
-                      [ View_Source ]
-                    </a>
+                    <div className="flex items-center gap-4">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="group/link text-xs font-mono text-neutral-400 hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer">
+                        <Github className="w-3.5 h-3.5 opacity-50 group-hover/link:opacity-100 transition-opacity" /> [ Code ]
+                      </a>
+                      <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-neutral-400 hover:text-sky-400 transition-colors flex items-center gap-1.5 cursor-pointer">
+                        [ View_Source ]
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -281,7 +293,7 @@ export default function Home() {
           </h2>
 
           <div className="flex flex-col gap-6">
-            <p className="text-neutral-400 text-lg w-full">
+            <p className="text-neutral-400 text-base sm:text-lg w-full">
               Currently open to new opportunities and collaborations. Let's build something intentional.
             </p>
             <a
@@ -291,10 +303,10 @@ export default function Home() {
               <span className="text-xs text-neutral-600 uppercase tracking-widest flex items-center gap-2 mb-1">
                 <span className="text-emerald-500">{">"}</span> SET_TARGET_ADDRESS
               </span>
-              <div className="text-xl sm:text-2xl text-neutral-300 group-hover:text-white transition-colors flex items-center gap-3 bg-[#111] border border-neutral-800 px-6 py-4 rounded-none hover:border-emerald-500/30 shadow-inner">
-                <span className="text-emerald-500/50 group-hover:text-emerald-500 transition-colors">mailto:</span>
+              <div className="text-base sm:text-2xl text-neutral-300 group-hover:text-white transition-colors flex items-center gap-2 sm:gap-3 bg-[#111] border border-neutral-800 px-4 py-3 sm:px-6 sm:py-4 rounded-none hover:border-emerald-500/30 shadow-inner break-all">
+                <span className="text-emerald-500/50 group-hover:text-emerald-500 transition-colors hidden sm:inline">mailto:</span>
                 shadysubh@gmail.com
-                <span className="w-2.5 sm:w-3 h-6 sm:h-7 bg-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <span className="w-2.5 sm:w-3 h-5 sm:h-7 bg-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0"></span>
               </div>
             </a>
 
