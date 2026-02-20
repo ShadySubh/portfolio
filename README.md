@@ -76,4 +76,4 @@ Ensure you have Node.js (v18+) and npm installed locally.
 
 The architecture relies exclusively on modern edge computing infrastructure. It is heavily optimized for zero-config deployments to [Vercel](https://vercel.com/) or [Netlify](https://netlify.com/) out of the box due to the Next.js foundation. 
 
-*Design & Developed by Shibu © 2026. All rights reserved.*
+*Design & Developed by Shibu (shadysubh) © 2026. All rights reserved.*
