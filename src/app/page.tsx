@@ -68,7 +68,7 @@ export default function Home() {
                   <div className="absolute top-0 left-0 w-full h-[2px] bg-emerald-400 shadow-[0_0_15px_rgba(52,211,153,1)] -translate-y-[20px] group-hover:translate-y-[120px] transition-transform duration-[2s] ease-in-out z-30 pointer-events-none" />
 
                   <img
-                    src="/images/web_dev_projects/Pfp2.svg"
+                    src="/images/web_dev_projects/pfp2.svg"
                     alt="Shibu Profile"
                     className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
